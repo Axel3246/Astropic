@@ -143,7 +143,7 @@ struct ContentView: View {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd"
         let date = dateFormatter.string(from: datePicked)
-        print("DATE TITLE\(date)")
+       // print("DATE TITLE\(date)")
         return date
     }
     
@@ -160,10 +160,10 @@ struct ContentView: View {
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
             throw APError.invalidResponse
         }
-        print(date)
+       // print(date)
         do {
             let decoder = JSONDecoder()
-            print( try decoder.decode([AstronomicalPicture].self, from: data))
+           // print( try decoder.decode([AstronomicalPicture].self, from: data))
             return try decoder.decode([AstronomicalPicture].self, from: data)
         } catch {
             throw APError.invalidData
@@ -179,7 +179,7 @@ struct AstronomicalPicture : Codable {
     let explanation: String
     let title: String
     let hdurl: String
-    let copyright: String? // Make it optional
+    let copyright: String? // JSON sometimes doesn't contain copyright
     
 }
 
