@@ -39,8 +39,6 @@ struct ContentView: View {
                     }
                     .padding(.vertical, 4)
                     
-                    
-                    
                     Group {
                         Text(astroPic?[0].title ?? "Title Placeholder")
                             .font(.title.bold())
@@ -50,8 +48,7 @@ struct ContentView: View {
                         Text("Copyright: \(astroPic?[0].copyright?.replacingOccurrences(of: "\n", with: "") ?? "None")")
                             .font(.subheadline.bold())
                             .foregroundStyle(.secondary)
-                            .padding(.vertical, 2)
-                            .padding(.bottom, 6)
+                            .padding(.bottom, 10)
                         
                         Button{
                             showCover.toggle()
@@ -78,6 +75,7 @@ struct ContentView: View {
                                 .blendMode(.destinationOver)
                                 .onChange(of: datePicked) {
                                     getDateString()
+                                    astroPic?[0].hdurl = ""
                                     Task{ // In order to call API Again
                                         try await refreshAstroPic()
                                     }
@@ -97,27 +95,25 @@ struct ContentView: View {
                         print ("Unexpected Error")
                     }
                 }
-                .fullScreenCover(isPresented: $showCover){
+                .sheet(isPresented: $showCover){
                     VStack{
                         // Close Button
-                        HStack(alignment: .top){
+                        Text("About the Picture")
+                            .font(.title.bold())
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.top, 12)
+                    
+                        ScrollView{
+                            Text(astroPic?[0].explanation.replacingOccurrences(of: ". ", with: ".\n\n") ?? "Explanation Placeholder")
+                                .font(.body)
+                                .padding(.vertical, 4)
                             Spacer()
-                            Text("Close")
-                                .font(.body.bold())
-                                .foregroundStyle(.blue)
-                                .onTapGesture {
-                                    showCover.toggle()
-                                }
                         }
-                        Spacer()
-                        
-                        Text(astroPic?[0].explanation ?? "Explanation Placeholder")
-                            .font(.body)
-                            .padding(.vertical, 4)
-                        
-                        Spacer()
+                        .scrollIndicators(.hidden)
                     }
                     .padding()
+                    .presentationDetents([.height(300), .fraction(0.99)])
+                    .presentationContentInteraction(.scrolls)
                 }
             }
             .scrollIndicators(.hidden)
@@ -178,7 +174,7 @@ struct AstronomicalPicture : Codable {
     let date: String
     let explanation: String
     let title: String
-    let hdurl: String
+    var hdurl: String
     let copyright: String? // JSON sometimes doesn't contain copyright
     
 }
