@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a target="_blank" href="https://github.com/Axel3246/Astropic">
-    <img src="https://github.com/Axel3246/Astropic/blob/main/ConcurrencyNasa/Assets.xcassets/AppIcon.appiconset/120.png?raw=true" alt="Logo" width="15%" height="15%">
+    <img src="https://github.com/Axel3246/Astropic/blob/main/ConcurrencyNasa/Assets.xcassets/AppIcon.appiconset/1024.png?raw=true" alt="Logo" width="15%" height="15%">
   </a>
 
 <h3 align="center">AstroPic</h3>
@@ -81,7 +81,12 @@ If you would like to see the picture of another date, you can tap the calendar a
 
 ### Step Three: Learning More about the Picture
 
-<i> WORK IN PROGRESS... </i>
+Finally, if you would like to learn more about the picture, you can tap on the `Learn More` button. It will show a modal where you can read a brief explanation of it.
+
+<div align="center">
+ <img src="https://github.com/Axel3246/Astropic/blob/main/ConcurrencyNasa/Assets.xcassets/ImagesReadme/Photo3.imageset/Photo3.png?raw=true" alt="AppScreenshot" width="25%" height="25%">
+</div>
+
 
 <!-- CONTRIBUTING -->
 ## The Team
