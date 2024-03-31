@@ -17,30 +17,6 @@
 </div>
 
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">The Team</a></li>
-    <li><a href="#license">License</a></li>
-
-  </ol>
-</details>
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -57,7 +33,6 @@
 Concurrency is one of the main skills an iOS Developer should have. This project aims to practice concurrency with Swift by taking advantage of NASA's APOD API.
 
 
-<p align="right">(<a href="#readme-top">Take me up!</a>)</p>
 <!-- https://github.com/Ileriayo/markdown-badges -->
 
 ### Built With
@@ -65,8 +40,6 @@ The technologies that made possible this project are shown below.
 
 > ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
 > ![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
-
-<p align="right">(<a href="#readme-top">Take me up!</a>)</p>
 
 ### Prerequisites
 
@@ -96,5 +69,3 @@ Here you'll find the team that made possible this project. Feel free to check ou
   <img src="https://contrib.rocks/image?repo=Axel3246/AstroPic" />
 </a>
 
-
-<p align="right">(<a href="#readme-top">Take me up!</a>)</p>
