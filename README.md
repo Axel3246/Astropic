@@ -91,7 +91,7 @@ Finally, if you would like to learn more about the picture, you can tap on the `
 <!-- CONTRIBUTING -->
 ## The Team
 
-And that's a wrap. Thanks for checking out AstroPic!
+And that's a wrap. Thanks for checking out Astropic!
 
 <a href="https://github.com/Axel3246/AstroPic/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Axel3246/AstroPic" />
